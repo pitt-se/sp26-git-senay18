@@ -1,12 +1,20 @@
 public class CommitCafe {
 
-    private static String barista = "Nadine"; // STUDENT_TODO_1A: Change name
+    private static String barista = "Senay"; // STUDENT_TODO_1A: Change name
     // STUDENT_TODO_1B: Add a nickname or title for the barista
+    private static String baristaTitle = "Lead Barista";
 
     private static int cups = 0;
 
     public static void brew(String drink) {
         // STUDENT_TODO_2A: Implement - add 1 to cups & print a message
+        cups++;
+        if("Espresso".equals(drink)) {
+            System.out.println("Grinding coffee beans for " + drink);
+        } else if("Latte".equals(drink)) {
+            System.out.println("Steaming milk for " + drink);
+        }
+        System.out.println(baristaTitle + " " + barista + " brewed a cup of " + drink);
         // STUDENT_TODO_2B: Add a second brew-related improvement
     }
 
