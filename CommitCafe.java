@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CommitCafe {
 
     private static String barista = "Senay"; // STUDENT_TODO_1A: Change name
@@ -23,8 +25,14 @@ public class CommitCafe {
     }
 
     public static void main(String[] args) {
-        brew("Espresso");
-        brew("Latte");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the type of drink to brew: 1 for Espresso, 2 for Latte: ");
+        int choice = scanner.nextInt();
+        if(choice == 1) {
+            brew("Espresso");
+        } else if(choice == 2) {
+            brew("Latte");
+        }
         printSummary();
     }
 }
